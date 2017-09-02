@@ -69,7 +69,7 @@ public class MainActivity extends Activity {
                 if(isNetworkAvailable())
                     try {
                         String _teach = (teach.isChecked()) ? "?t=true" : "";
-                        String rezdel = (teach.isChecked()) ? ":," : ",";
+                        String rezdel = (teach.isChecked()) ? ":," : ";,";
 
                         String list_group = new MyPHP().execute("decoder_group.php"+_teach).get();
                         Windows.alert(context,"",list_group);
@@ -111,7 +111,7 @@ public class MainActivity extends Activity {
         SetGroup.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                String rezdel = (teach.isChecked()) ? ":," : ",";
+                String rezdel = (teach.isChecked()) ? ":," : ";,";
                 result = Storage.loadData(context, "GROUPS_LIST").split(rezdel);
 
                 //Windows.alert(context,"",result[1]);

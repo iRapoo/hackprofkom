@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.dualcom.hackprofkom.MainActivity"
+    android:background="#000">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Загрузить"
+        android:id="@+id/GetGroup"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Очистить старую базу"
+        android:id="@+id/CleanGroup"
+        android:layout_below="@+id/GetGroup"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Загрузить новое расписание"
+        android:id="@+id/SetGroup"
+        android:layout_below="@+id/CleanGroup"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Список не получен"
+        android:id="@+id/GroupList"
+        android:layout_alignTop="@+id/GetGroup"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/CleanGroup"
+        android:layout_toEndOf="@+id/CleanGroup"
+        android:textColor="@color/all_text"
+        android:gravity="right"
+        android:layout_marginRight="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Статус очистки"
+        android:id="@+id/ClearStatus"
+        android:layout_alignTop="@+id/CleanGroup"
+        android:layout_alignLeft="@+id/GroupList"
+        android:layout_alignStart="@+id/GroupList"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/all_text"
+        android:gravity="right"
+        android:layout_marginRight="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Загружено"
+        android:id="@+id/SetCounter"
+        android:layout_alignTop="@+id/SetGroup"
+        android:layout_toRightOf="@+id/SetGroup"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/all_text"
+        android:gravity="right"
+        android:layout_marginRight="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="00:00"
+        android:id="@+id/time_foward"
+        android:layout_below="@+id/SetCounter"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/all_text" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress"
+        android:progressTint="#FFF"
+        android:indeterminate="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="-5dp" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/logo"
+        android:layout_marginTop="97dp"
+        android:background="@mipmap/ic_launcher"
+        android:layout_below="@+id/time_foward"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="АнтиПрофком"
+        android:id="@+id/name_version"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/all_text"
+        android:textSize="25dp" />
+
+    <WebView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/LogSetGroup"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:alpha="0"
+        android:layout_below="@+id/time_foward"
+        android:layout_above="@+id/progress" />
+
+    <CheckBox
+        android:text="Преподаватели"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/name_version"
+        android:layout_alignStart="@+id/name_version"
+        android:id="@+id/teach"
+        android:layout_above="@+id/CleanGroup"
+        android:textColor="@android:color/white"
+        android:textCursorDrawable="@android:color/white" />
+
+</RelativeLayout>

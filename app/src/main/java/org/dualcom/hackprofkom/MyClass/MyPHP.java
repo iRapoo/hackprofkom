@@ -20,7 +20,7 @@ public class MyPHP extends AsyncTask<String, Integer, String> {
 
     Context context;
 
-    public static String HOST = "http://rapoo.mysit.ru/hack/";
+    public static String HOST = "http://rapoo.mysit.ru/hack?module=";
     @Override
     protected String doInBackground(String... params) {
         try{

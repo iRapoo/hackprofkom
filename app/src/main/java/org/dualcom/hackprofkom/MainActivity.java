@@ -68,10 +68,10 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 if(isNetworkAvailable())
                     try {
-                        String _teach = (teach.isChecked()) ? "?t=true" : "";
+                        String _teach = (teach.isChecked()) ? "&t=true" : "";
                         String rezdel = (teach.isChecked()) ? ":," : ";,";
 
-                        String list_group = new MyPHP().execute("decoder_group.php"+_teach).get();
+                        String list_group = new MyPHP().execute("decoder_group"+_teach).get();
                         Windows.alert(context,"",list_group);
                         String[] count = list_group.split(rezdel);
                         GroupList.setText("Получено: "+(count.length-1));
@@ -93,9 +93,9 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 if(isNetworkAvailable())
                     try {
-                        String _teach = (teach.isChecked()) ? "?t=true" : "";
+                        String _teach = (teach.isChecked()) ? "&t=true" : "";
 
-                        String clearRes = new MyPHP().execute("clear_groups.php"+_teach).get();
+                        String clearRes = new MyPHP().execute("clear_groups"+_teach).get();
                         if(clearRes.equals("1"))
                             ClearStatus.setText("Расписание очищено");
                         else
@@ -157,7 +157,7 @@ public class MainActivity extends Activity {
 
                                 // указываем страницу загрузки
                                 if (isNetworkAvailable())
-                                    mWebView.loadUrl("http://rapoo.mysit.ru/hack/decoder.php?g="+result[counter]+_teach);
+                                    mWebView.loadUrl("http://rapoo.mysit.ru/hack?module=decoder&g="+result[counter]+_teach);
                                 //**********/
                                 percent = ((counter/(float)(result.length-1))*100);
                                 percent = new BigDecimal(percent).setScale(2, RoundingMode.UP).doubleValue();

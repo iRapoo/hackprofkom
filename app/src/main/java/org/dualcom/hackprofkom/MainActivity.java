@@ -19,6 +19,7 @@ import android.widget.TextView;
 import org.dualcom.hackprofkom.MyClass.MyPHP;
 import org.dualcom.hackprofkom.MyClass.Storage;
 import org.dualcom.hackprofkom.MyClass.Windows;
+import org.dualcom.hackprofkom.MyClass.isInternet;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -157,7 +158,7 @@ public class MainActivity extends Activity {
 
                                 // указываем страницу загрузки
                                 if (isNetworkAvailable())
-                                    mWebView.loadUrl("http://rapoo.mysit.ru/hack?module=decoder&g="+result[counter]+_teach);
+                                    mWebView.loadUrl(isInternet.API + "decoder&g="+result[counter]+_teach);
                                 //**********/
                                 percent = ((counter/(float)(result.length-1))*100);
                                 percent = new BigDecimal(percent).setScale(2, RoundingMode.UP).doubleValue();

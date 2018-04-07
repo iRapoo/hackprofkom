@@ -6,7 +6,7 @@ import android.net.NetworkInfo;
 
 public class isInternet {
 
-    private static String HOST = "http://rapoo.mysit.ru/";
+    private static String HOST = "http://quenix.zzz.com.ua/";//"http://rapoo.mysit.ru/";
     public static String API = HOST+"hack?module=";
 
     public static Boolean active(Context context)

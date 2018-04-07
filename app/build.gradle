@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 27
-    buildToolsVersion '27.0.2'
+    buildToolsVersion '27.0.3'
 
     defaultConfig {
         applicationId "org.dualcom.hackprofkom"
@@ -20,7 +20,7 @@ android {
 }
 
 ext {
-    ApiBuildVersion = '27.0.2'
+    ApiBuildVersion = '27.1.0'
     playServicesVersion = '11.8.0'
 }
 

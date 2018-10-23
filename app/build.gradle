@@ -1,15 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion '27.0.3'
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
         applicationId "org.dualcom.hackprofkom"
-        minSdkVersion 15
-        targetSdkVersion 27
-        versionCode 9
-        versionName "1.9"
+        minSdkVersion 20
+        targetSdkVersion 28
+        versionCode 10
+        versionName "2.0"
     }
     buildTypes {
         release {
@@ -20,14 +20,14 @@ android {
 }
 
 ext {
-    ApiBuildVersion = '27.1.0'
-    playServicesVersion = '11.8.0'
+    ApiBuildVersion = '28.0.0'
+    playServicesVersion = '16.0.0'
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //testCompile 'junit:junit:4.12'
     implementation "com.android.support:appcompat-v7:${ApiBuildVersion}"
-    compile 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
-    compile files('libs/json-simple-1.1.1.jar')
+    implementation 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+    implementation files('libs/json-simple-1.1.1.jar')
 }
